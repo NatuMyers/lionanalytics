@@ -24,12 +24,15 @@ def static_proxy(path):
   return app.send_static_file(path)
 
 
+
 # THE OTHER PYTHON APPS (NOT WITH BLUEPRINT)--------
 
 # DECEPTRON 
 from flask import render_template, jsonify
 from lib.translate import translate
 
+#MAKE SURE you update the post location (in the included js file) to 
+#this route
 @app.route('/deceptron', methods=['GET', 'POST'])
 def deceptron():
     if request.method == 'POST':
@@ -38,8 +41,7 @@ def deceptron():
         result = translate(text)
         return result
     else:
-        return render_template('deceptron.html')
-
+        return render_template('deceptronHome.html')
 
 
 

@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<!-- INCLUDES IN THIS FILE ARE FROM STATIC, so deceptronAssets means static/deceptronAssets-->
+<html>
+
+<head>
+
+    <link media="all">
+    <!--<link rel="stylesheet" type="text/css" href="deceptronAssets/reset.min.css"> -->
+    <!--<link rel="stylesheet" type="text/css" href="deceptronAssets/base.css"> -->
+
+    <!-- JS (load angular, ui-router, and our custom js file) -->
+    <script src="http://code.angularjs.org/1.2.13/angular.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.8/angular-ui-router.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.js"></script>
+
+
+    <script src="//https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-rc1/jquery.js"></script>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+
+
+    <link rel="stylesheet" type="text/css" href="css/vidBg.css">
+
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="/sass/materialize.css" type="text/css" rel="stylesheet" media="screen,projection" />
+    <link href="/css/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
+
+    <!-- VERY IMPORTANT FOR DECEPTRON ROUTING! -->
+    <!-- the other materialize stuff is from static root, but this is special -->
+    <script src="/deceptronAssets/deceptronRouting.js"></script>
+
+    <style>
+        .bg-1 {
+            position: fixed;
+            right: 0;
+            bottom: 0;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            z-index: -100;
+            background: url('img/back1.jpg') no-repeat;
+            background-size: cover;
+        }
+        
+        .content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 30px;
+            background: rgba(255, 255, 255, .9);
+        }
+        
+        textarea {
+
+    height: 250px;
+}
+    </style>
+
+    <title>Deceptron</title>
+
+</head>
+
+
+
+
+
+<!-- NAVIGATION -->
+<nav role="navigation  " class="black z-depth-5">
+    <div class="nav-wrapper container "><a id="logo-container" href="#" class="brand-logo white-text thin  "><h6>Lion</h6></a>
+
+
+        <!-- blog -->
+        <!-- Desktop version -->
+        <ul class="right white-text thin">
+            <li class="thin white-text">
+                <a ui-sref="gifts">
+                    <h7 class="thin white-text">Blog</h7>
+                </a>
+            </li>
+        </ul>
+
+        <!-- blog -->
+        <!-- Desktop version -->
+        <ul class="right white-text thin">
+            <li class="thin white-text">
+                <a ui-sref="gifts">
+                    <h7 class="thin white-text ">About Deceptron</h7>
+                </a>
+            </li>
+        </ul>
+
+    </div>
+</nav>
+
+
+
+<!-- THIS IS WHERE WE WILL INJECT OUR CONTENT ============================== -->
+<div class="container center">
+
+    <br></br>
+    <img src="deceptronAssets/deceptronTitle.png" width="70%" />
+</div>
+
+<!-- the app -->
+<div class="row container">
+
+    <div class="col s12 m6 l6">
+
+                <div class="card black z-depth-5">
+                    <div class="card-content white-text">
+                        <!--<span class="card-title thins">Deception Rank</span>-->
+                        <h5 class="thin center">Enter in</h5>
+                        
+                        
+        
+
+        <form action='#' method='post'>
+            <div class="input-field"  >
+                <textarea id="input" name="text" rows="4" height="40%" placeholder="Enter text here to detect how deceptive it is!"></textarea>
+            </div>
+
+            <br>
+            <div class="form_block center">
+                <input id="button" type="button" class="btn white black-text" value="Analyze!">
+            </div>
+        </form>
+
+    </div>
+
+    <p>
+    </div>
+    </div>
+
+        <div class="col s12 m6 l6">
+
+
+            <div class="row center">
+                <div class="card black z-depth-5">
+                    <div class="card-content white-text">
+                        <!-- <span class="card-title thins">Deception Rank</span> -->
+                        <h5 class="thin center">Deceptron Rank</h5>
+                        <img src="deceptronAssets/brain.png" width="50%" />
+
+                        <h9 class="white-text" id="result">
+                        </h9>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+</div>
+
+
+
+<footer class="page-footer black ">
+    <div class="container">
+        <div class="row">
+            <div class="col l6 s12">
+                <h6 class="white-text">Lion</h6>
+                <p class="white-text ">Lion prides itself on delivering data mined insights that can answer real world questions and trends.</p>
+
+            </div>
+            <div class="col l3 s12">
+                <h6 class="white-text">Links</h6>
+                <ul>
+                    <li><a class="white-text light" href="#!">Coming Soon...</a>
+                    </li>
+
+                </ul>
+            </div>
+            <div class="col l3 s12">
+                <h6 class="white-text">Connect</h6>
+                <ul>
+                    <li><a class="white-text light" href="http://facebook.com">Facebook Page</a>
+                    </li>
+                    <li><a class="white-text light" href="http://raptroop.com">Raptroop</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="footer-copyright">
+        <div class="container">
+            <a class="white-text "> Made by  </a> <a class="white-text " href="http://natumyers.com">Natu Myers</a>
+        </div>
+    </div>
+</footer>
+
+
+<script src="deceptronAssets/jquery.js"></script>
+<script src="deceptronAssets/script.js"></script>
+
+
+
+
+
+</body>
+
+</html>
