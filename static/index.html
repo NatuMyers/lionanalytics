@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- JS (load angular, ui-router, and our custom js file) -->
+    <script src="http://code.angularjs.org/1.2.13/angular.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.8/angular-ui-router.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+
+    <script src="/js/app.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/vidBg.css">
+
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="/sass/materialize.css" type="text/css" rel="stylesheet" media="screen,projection" />
+    <link href="/css/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
+
+    <style>
+    .bg-1 {
+        position: fixed;
+        right: 0;
+        bottom: 0;
+        min-width: 100%;
+        min-height: 100%;
+        width: auto;
+        height: auto;
+        z-index: -100;
+        background: url('img/back1.jpg') no-repeat;
+        background-size: cover;
+    }
+    .content {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 30px;
+        background: rgba(255, 255, 255, .9);
+    }
+    </style>
+
+<title>Lion 🦁</title>
+</head>
+
+
+
+
+<!-- apply our angular app to our site -->
+<body ng-app="routerApp" >
+
+
+<!-- NAVIGATION -->
+<nav role="navigation  " class = "white z-depth-5"  >
+            <div class="nav-wrapper container "><a id="logo-container" href="#" class="brand-logo black-text thin  "><h6>Lion</h6></a>
+
+
+            <!-- blog -->
+                <!-- Desktop version -->
+                <ul class="right black-text">
+                    <li class="thin black-text"><a ui-sref="gifts"><h5 class="light black-text">Blog</h5></a>
+                    </li>
+                </ul>
+
+            </div>
+</nav>
+
+
+
+<!-- THIS IS WHERE WE WILL INJECT OUR CONTENT ============================== -->
+<div ui-view></div>
+
+
+
+<footer class="page-footer black ">
+    <div class="container">
+        <div class="row">
+            <div class="col l6 s12">
+                <h6 class="white-text">Lion</h6>
+                <p class="white-text ">Lion prides itself on delivering data mined insights that can answer real world questions and trends.</p>
+
+            </div>
+            <div class="col l3 s12">
+                <h6 class="white-text">Links</h6>
+                <ul>
+                    <li><a class="white-text light" href="#!">Coming Soon...</a>
+                    </li>
+
+                </ul>
+            </div>
+            <div class="col l3 s12">
+                <h6 class="white-text">Connect</h6>
+                <ul>
+                    <li><a class="white-text light" href="http://facebook.com">Facebook Page</a>
+                    </li>
+                    <li><a class="white-text light" href="http://raptroop.com">Raptroop</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="footer-copyright">
+        <div class="container">
+            <a class="white-text "> Made by  </a> <a class="white-text " href="http://natumyers.com">Natu Myers</a>
+        </div>
+    </div>
+</footer>
+
+
+</body>
+
+
+
+</html>

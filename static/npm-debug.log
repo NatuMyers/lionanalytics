@@ -1,0 +1,289 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/local/bin/node', '/usr/local/bin/npm', 'install' ]
+2 info using npm@3.3.12
+3 info using node@v5.2.0
+4 silly loadCurrentTree Starting
+5 silly install loadCurrentTree
+6 silly install readLocalPackageData
+7 silly install normalizeTree
+8 silly loadCurrentTree Finishing
+9 silly loadIdealTree Starting
+10 silly install loadIdealTree
+11 silly cloneCurrentTree Starting
+12 silly install cloneCurrentTreeToIdealTree
+13 silly cloneCurrentTree Finishing
+14 silly loadShrinkwrap Starting
+15 silly install loadShrinkwrap
+16 silly loadShrinkwrap Finishing
+17 silly loadAllDepsIntoIdealTree Starting
+18 silly install loadAllDepsIntoIdealTree
+19 silly fetchNamedPackageData angular
+20 silly mapToRegistry name angular
+21 silly mapToRegistry using default registry
+22 silly mapToRegistry registry https://registry.npmjs.org/
+23 silly mapToRegistry uri https://registry.npmjs.org/angular
+24 silly fetchNamedPackageData materialize
+25 silly mapToRegistry name materialize
+26 silly mapToRegistry using default registry
+27 silly mapToRegistry registry https://registry.npmjs.org/
+28 silly mapToRegistry uri https://registry.npmjs.org/materialize
+29 verbose request uri https://registry.npmjs.org/materialize
+30 verbose request no auth needed
+31 info attempt registry request try #1 at 8:19:22 PM
+32 verbose request id a41fc74b917f3eb3
+33 http request GET https://registry.npmjs.org/materialize
+34 verbose request uri https://registry.npmjs.org/angular
+35 verbose request no auth needed
+36 info attempt registry request try #1 at 8:19:22 PM
+37 verbose etag "1ES4W7M3QVG204GYDBATDZT9X"
+38 http request GET https://registry.npmjs.org/angular
+39 http 200 https://registry.npmjs.org/angular
+40 verbose headers { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+40 verbose headers   etag: '"3QIPNWIIBSY5F0SYDKLHN64XQ"',
+40 verbose headers   'content-type': 'application/json',
+40 verbose headers   'content-encoding': 'gzip',
+40 verbose headers   'cache-control': 'max-age=300',
+40 verbose headers   'content-length': '15140',
+40 verbose headers   'accept-ranges': 'bytes',
+40 verbose headers   date: 'Tue, 26 Apr 2016 00:19:22 GMT',
+40 verbose headers   via: '1.1 varnish',
+40 verbose headers   age: '218',
+40 verbose headers   connection: 'keep-alive',
+40 verbose headers   'x-served-by': 'cache-dfw1831-DFW',
+40 verbose headers   'x-cache': 'HIT',
+40 verbose headers   'x-cache-hits': '1',
+40 verbose headers   'x-timer': 'S1461629962.892470,VS0,VE0',
+40 verbose headers   vary: 'Accept-Encoding' }
+41 silly get cb [ 200,
+41 silly get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+41 silly get     etag: '"3QIPNWIIBSY5F0SYDKLHN64XQ"',
+41 silly get     'content-type': 'application/json',
+41 silly get     'content-encoding': 'gzip',
+41 silly get     'cache-control': 'max-age=300',
+41 silly get     'content-length': '15140',
+41 silly get     'accept-ranges': 'bytes',
+41 silly get     date: 'Tue, 26 Apr 2016 00:19:22 GMT',
+41 silly get     via: '1.1 varnish',
+41 silly get     age: '218',
+41 silly get     connection: 'keep-alive',
+41 silly get     'x-served-by': 'cache-dfw1831-DFW',
+41 silly get     'x-cache': 'HIT',
+41 silly get     'x-cache-hits': '1',
+41 silly get     'x-timer': 'S1461629962.892470,VS0,VE0',
+41 silly get     vary: 'Accept-Encoding' } ]
+42 verbose get saving angular to /Users/natumyers/.npm/registry.npmjs.org/angular/.cache.json
+43 silly resolveWithNewModule angular@1.5.5 checking installable status
+44 silly cache add args [ 'angular@>=1.3.5', null ]
+45 verbose cache add spec angular@>=1.3.5
+46 silly cache add parsed spec Result {
+46 silly cache add   raw: 'angular@>=1.3.5',
+46 silly cache add   scope: null,
+46 silly cache add   name: 'angular',
+46 silly cache add   rawSpec: '>=1.3.5',
+46 silly cache add   spec: '>=1.3.5',
+46 silly cache add   type: 'range' }
+47 silly addNamed angular@>=1.3.5
+48 verbose addNamed ">=1.3.5" is a valid semver range for angular
+49 silly addNameRange { name: 'angular', range: '>=1.3.5', hasData: false }
+50 silly mapToRegistry name angular
+51 silly mapToRegistry using default registry
+52 silly mapToRegistry registry https://registry.npmjs.org/
+53 silly mapToRegistry uri https://registry.npmjs.org/angular
+54 verbose addNameRange registry:https://registry.npmjs.org/angular not in flight; fetching
+55 verbose get https://registry.npmjs.org/angular not expired, no request
+56 silly addNameRange number 2 { name: 'angular', range: '>=1.3.5', hasData: true }
+57 silly addNameRange versions [ 'angular',
+57 silly addNameRange   [ '0.0.1',
+57 silly addNameRange     '0.0.1-1',
+57 silly addNameRange     '0.0.1-2',
+57 silly addNameRange     '0.0.2',
+57 silly addNameRange     '0.0.3',
+57 silly addNameRange     '0.0.4',
+57 silly addNameRange     '1.0.0',
+57 silly addNameRange     '1.0.1',
+57 silly addNameRange     '1.0.2',
+57 silly addNameRange     '1.0.3',
+57 silly addNameRange     '1.0.4',
+57 silly addNameRange     '1.0.5',
+57 silly addNameRange     '1.0.6',
+57 silly addNameRange     '1.0.7',
+57 silly addNameRange     '1.0.8',
+57 silly addNameRange     '1.1.0',
+57 silly addNameRange     '1.1.1',
+57 silly addNameRange     '1.1.2',
+57 silly addNameRange     '1.1.3',
+57 silly addNameRange     '1.1.4',
+57 silly addNameRange     '1.1.5',
+57 silly addNameRange     '1.2.0',
+57 silly addNameRange     '1.2.1',
+57 silly addNameRange     '1.2.2',
+57 silly addNameRange     '1.2.3',
+57 silly addNameRange     '1.2.4',
+57 silly addNameRange     '1.2.5',
+57 silly addNameRange     '1.2.6',
+57 silly addNameRange     '1.2.7',
+57 silly addNameRange     '1.2.8',
+57 silly addNameRange     '1.2.9',
+57 silly addNameRange     '1.2.10',
+57 silly addNameRange     '1.2.11',
+57 silly addNameRange     '1.2.12',
+57 silly addNameRange     '1.2.13',
+57 silly addNameRange     '1.2.14',
+57 silly addNameRange     '1.2.15',
+57 silly addNameRange     '1.2.16',
+57 silly addNameRange     '1.2.17',
+57 silly addNameRange     '1.2.18',
+57 silly addNameRange     '1.2.19',
+57 silly addNameRange     '1.2.20',
+57 silly addNameRange     '1.2.21',
+57 silly addNameRange     '1.2.22',
+57 silly addNameRange     '1.2.23',
+57 silly addNameRange     '1.3.0-rc.5',
+57 silly addNameRange     '1.3.0',
+57 silly addNameRange     '1.3.1',
+57 silly addNameRange     '1.3.2',
+57 silly addNameRange     '1.3.3',
+57 silly addNameRange     '1.3.4-build.3588',
+57 silly addNameRange     '1.2.27',
+57 silly addNameRange     '1.3.4',
+57 silly addNameRange     '1.3.5',
+57 silly addNameRange     '1.3.6',
+57 silly addNameRange     '1.3.7',
+57 silly addNameRange     '1.2.28',
+57 silly addNameRange     '1.3.8',
+57 silly addNameRange     '1.4.0-beta.0',
+57 silly addNameRange     '1.3.9',
+57 silly addNameRange     '1.3.10',
+57 silly addNameRange     '1.4.0-beta.1',
+57 silly addNameRange     '1.4.0-beta.2',
+57 silly addNameRange     '1.3.11',
+57 silly addNameRange     '1.4.0-beta.3',
+57 silly addNameRange     '1.3.12',
+57 silly addNameRange     '1.3.13',
+57 silly addNameRange     '1.4.0-beta.4',
+57 silly addNameRange     '1.3.14',
+57 silly addNameRange     '1.4.0-beta.5',
+57 silly addNameRange     '1.4.0-beta.6',
+57 silly addNameRange     '1.3.15',
+57 silly addNameRange     '1.4.0-rc.0',
+57 silly addNameRange     '1.4.0-rc.1',
+57 silly addNameRange     '1.4.0-rc.2',
+57 silly addNameRange     '1.4.0',
+57 silly addNameRange     '1.3.16',
+57 silly addNameRange     '1.4.1',
+57 silly addNameRange     '1.4.2',
+57 silly addNameRange     '1.3.17',
+57 silly addNameRange     '1.4.3',
+57 silly addNameRange     '1.4.4',
+57 silly addNameRange     '1.3.18',
+57 silly addNameRange     '1.4.5',
+57 silly addNameRange     '1.3.19',
+57 silly addNameRange     '1.4.6',
+57 silly addNameRange     '1.5.0-beta.0',
+57 silly addNameRange     '1.2.29',
+57 silly addNameRange     '1.3.20',
+57 silly addNameRange     '1.4.7',
+57 silly addNameRange     '1.5.0-beta.2',
+57 silly addNameRange     '1.4.8',
+57 silly addNameRange     '1.5.0-rc.0',
+57 silly addNameRange     '1.5.0-rc.1',
+57 silly addNameRange     '1.4.9',
+57 silly addNameRange     '1.5.0-rc.2',
+57 silly addNameRange     '1.5.0',
+57 silly addNameRange     '1.5.1',
+57 silly addNameRange     '1.4.10',
+57 silly addNameRange     '1.5.2',
+57 silly addNameRange     '1.5.3',
+57 silly addNameRange     '1.5.5' ] ]
+58 silly addNamed angular@1.5.5
+59 verbose addNamed "1.5.5" is a plain semver version for angular
+60 silly mapToRegistry name angular
+61 silly mapToRegistry using default registry
+62 silly mapToRegistry registry https://registry.npmjs.org/
+63 silly mapToRegistry uri https://registry.npmjs.org/angular
+64 verbose addRemoteTarball https://registry.npmjs.org/angular/-/angular-1.5.5.tgz not in flight; adding
+65 verbose addRemoteTarball [ 'https://registry.npmjs.org/angular/-/angular-1.5.5.tgz',
+65 verbose addRemoteTarball   '678fdfd1c9c47368dd202c7fc8bb3bd4dba17c18' ]
+66 info retry fetch attempt 1 at 8:19:23 PM
+67 info attempt registry request try #1 at 8:19:23 PM
+68 http fetch GET https://registry.npmjs.org/angular/-/angular-1.5.5.tgz
+69 http 200 https://registry.npmjs.org/materialize
+70 verbose headers { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+70 verbose headers   etag: '"8B1AFQGBCU139B1NZN6F6J6AB"',
+70 verbose headers   'content-type': 'application/json',
+70 verbose headers   'cache-control': 'max-age=300',
+70 verbose headers   'content-length': '2260',
+70 verbose headers   'accept-ranges': 'bytes',
+70 verbose headers   date: 'Tue, 26 Apr 2016 00:19:23 GMT',
+70 verbose headers   via: '1.1 varnish',
+70 verbose headers   age: '0',
+70 verbose headers   connection: 'keep-alive',
+70 verbose headers   'x-served-by': 'cache-dfw1837-DFW',
+70 verbose headers   'x-cache': 'MISS',
+70 verbose headers   'x-cache-hits': '0',
+70 verbose headers   'x-timer': 'S1461629962.897261,VS0,VE213',
+70 verbose headers   vary: 'Accept-Encoding' }
+71 silly get cb [ 200,
+71 silly get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+71 silly get     etag: '"8B1AFQGBCU139B1NZN6F6J6AB"',
+71 silly get     'content-type': 'application/json',
+71 silly get     'cache-control': 'max-age=300',
+71 silly get     'content-length': '2260',
+71 silly get     'accept-ranges': 'bytes',
+71 silly get     date: 'Tue, 26 Apr 2016 00:19:23 GMT',
+71 silly get     via: '1.1 varnish',
+71 silly get     age: '0',
+71 silly get     connection: 'keep-alive',
+71 silly get     'x-served-by': 'cache-dfw1837-DFW',
+71 silly get     'x-cache': 'MISS',
+71 silly get     'x-cache-hits': '0',
+71 silly get     'x-timer': 'S1461629962.897261,VS0,VE213',
+71 silly get     vary: 'Accept-Encoding' } ]
+72 verbose get saving materialize to /Users/natumyers/.npm/registry.npmjs.org/materialize/.cache.json
+73 silly fetchPackageMetaData Error: No compatible version found: materialize@~0.97.2
+73 silly fetchPackageMetaData Valid install targets:
+73 silly fetchPackageMetaData 1.0.0
+73 silly fetchPackageMetaData
+73 silly fetchPackageMetaData     at pickVersionFromRegistryDocument (/usr/local/lib/node_modules/npm/lib/fetch-package-metadata.js:156:16)
+73 silly fetchPackageMetaData     at /usr/local/lib/node_modules/npm/node_modules/iferr/index.js:13:50
+73 silly fetchPackageMetaData     at /usr/local/lib/node_modules/npm/lib/utils/pulse-till-done.js:19:8
+73 silly fetchPackageMetaData     at saved (/usr/local/lib/node_modules/npm/lib/cache/caching-client.js:168:7)
+73 silly fetchPackageMetaData     at /usr/local/lib/node_modules/npm/node_modules/graceful-fs/polyfills.js:210:7
+73 silly fetchPackageMetaData     at FSReqWrap.oncomplete (fs.js:83:15)
+73 silly fetchPackageMetaData  error for materialize@~0.97.2 [Error: No compatible version found: materialize@~0.97.2
+73 silly fetchPackageMetaData Valid install targets:
+73 silly fetchPackageMetaData 1.0.0
+73 silly fetchPackageMetaData ]
+74 http fetch 200 https://registry.npmjs.org/angular/-/angular-1.5.5.tgz
+75 silly fetchAndShaCheck shasum 678fdfd1c9c47368dd202c7fc8bb3bd4dba17c18
+76 verbose addTmpTarball /var/folders/69/gbrzw85x10df8s8fk21drjm80000gn/T/npm-1474-2735245b/registry.npmjs.org/angular/-/angular-1.5.5.tgz not in flight; adding
+77 verbose addTmpTarball already have metadata; skipping unpack for angular@1.5.5
+78 silly cache afterAdd angular@1.5.5
+79 verbose afterAdd /Users/natumyers/.npm/angular/1.5.5/package/package.json not in flight; writing
+80 verbose afterAdd /Users/natumyers/.npm/angular/1.5.5/package/package.json written
+81 silly rollbackFailedOptional Starting
+82 silly rollbackFailedOptional Finishing
+83 silly runTopLevelLifecycles Starting
+84 silly runTopLevelLifecycles Finishing
+85 silly install printInstalled
+86 verbose stack Error: No compatible version found: materialize@~0.97.2
+86 verbose stack Valid install targets:
+86 verbose stack 1.0.0
+86 verbose stack
+86 verbose stack     at pickVersionFromRegistryDocument (/usr/local/lib/node_modules/npm/lib/fetch-package-metadata.js:156:16)
+86 verbose stack     at /usr/local/lib/node_modules/npm/node_modules/iferr/index.js:13:50
+86 verbose stack     at /usr/local/lib/node_modules/npm/lib/utils/pulse-till-done.js:19:8
+86 verbose stack     at saved (/usr/local/lib/node_modules/npm/lib/cache/caching-client.js:168:7)
+86 verbose stack     at /usr/local/lib/node_modules/npm/node_modules/graceful-fs/polyfills.js:210:7
+86 verbose stack     at FSReqWrap.oncomplete (fs.js:83:15)
+87 verbose cwd /Users/natumyers/Desktop/postgrad/x/humanfactor
+88 error Darwin 15.3.0
+89 error argv "/usr/local/bin/node" "/usr/local/bin/npm" "install"
+90 error node v5.2.0
+91 error npm  v3.3.12
+92 error No compatible version found: materialize@~0.97.2
+92 error Valid install targets:
+92 error 1.0.0
+93 error If you need help, you may report this error at:
+93 error     <https://github.com/npm/npm/issues>
+94 verbose exit [ 1, true ]

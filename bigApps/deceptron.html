@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<!-- INCLUDES IN THIS FILE ARE FROM STATIC, so deceptronAssets means static/deceptronAssets-->
+<html>
+
+<head>
+
+    <link media="all">
+    <link rel="stylesheet" type="text/css" href="deceptronAssets/reset.min.css">
+    <link rel="stylesheet" type="text/css" href="deceptronAssets/base.css">
+
+
+
+    <!-- JS (load angular, ui-router, and our custom js file) -->
+    <script src="http://code.angularjs.org/1.2.13/angular.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.8/angular-ui-router.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+
+    <script src="/js/app.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/vidBg.css">
+
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="/sass/materialize.css" type="text/css" rel="stylesheet" media="screen,projection" />
+    <link href="/css/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
+
+    <style>
+    .bg-1 {
+        position: fixed;
+        right: 0;
+        bottom: 0;
+        min-width: 100%;
+        min-height: 100%;
+        width: auto;
+        height: auto;
+        z-index: -100;
+        background: url('img/back1.jpg') no-repeat;
+        background-size: cover;
+    }
+    .content {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 30px;
+        background: rgba(255, 255, 255, .9);
+    }
+    </style>
+
+	<title>Lion 🦁</title>
+
+
+
+
+
+
+</head>
+
+<body>
+    <header>
+	<div class="header">
+	    blah
+	</div>
+    </header>
+    <section class="content">
+	<div class="column">
+	    <h6>Введите сюда абракадабру</h6>
+	    <form action='#'  method='post'>
+		<div class="form_block">
+		    <textarea id="input" name="text" placeholder="введите текст здесь"></textarea>
+		</div>
+		
+		<div class="form_block">
+		    <input id="button" type="button" value="Дай правильный текст">
+		</div>
+	    </form>
+	</div>
+
+	<div class="column">
+	    <h6>Результат увидите здесь</h6>
+	    <textarea id="result"></textarea>
+	</div>
+    </section>
+
+<script src="deceptronAssets/jquery.js"></script>
+<script src="deceptronAssets/script.js"></script>
+
+</body>
+
+</html>

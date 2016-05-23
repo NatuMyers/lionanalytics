@@ -1,0 +1,55 @@
+<html>
+<head>
+
+	<meta charset="utf-8">
+	<title>HOME - JMF</title>	
+	<link rel="stylesheet" href="{{ url_for('static', filename='normalize.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,800,600' rel='stylesheet' type='text/css'>
+
+</head>
+
+<body>
+
+		<header>
+            <div class="title">
+			<h1>{{ deceptronItem.name }}</h1>
+            </div>
+		</header>
+		<div class="subtitle">
+			<p>MENU</p>
+		</div>
+        <div class="home">
+        <a href="{{ url_for('home') }}">All Restaurants</a>
+        </div>
+	{% if items %}
+		<div class="menu">
+			{% for i in items %}
+				<div class="item">
+					
+					<div class="name">{{ i.name }}</div>
+					<div class="price">{{ i.price }}</div>
+					<div class="description">{{ i.description }}</div>
+						<div class ="editdeleteItem">		
+							<a href="{{ url_for('editItem', rest_id=restaurant.id, menu_id=i.id) }}">Edit</a>
+							<a href="{{ url_for('deleteItem', rest_id=restaurant.id, menu_id=i.id) }}">Delete</a>	
+						</div>		
+				</div >
+			{% endfor %}
+		</div>
+	{% else %}
+		<div class="empty">
+			<p>There are currently no menu items for {{ deceptronItem.name }}. Add an item to begin!</p>
+		</div>
+	{% endif %}
+	<div class="addItem">
+		<a href="{{ url_for('newItem', rest_id=restaurant['id']) }}">Add New Item</a>
+	</div>
+	
+	<footer>
+		made by joji
+	</footer>
+
+</body>
+
+</html>

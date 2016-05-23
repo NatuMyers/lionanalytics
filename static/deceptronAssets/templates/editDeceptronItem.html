@@ -1,0 +1,42 @@
+<html>
+<head>
+
+	<meta charset="utf-8">
+	<title>RESTAURANTS</title>	
+	<link rel="stylesheet" href="{{ url_for('static', filename='normalize.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,800,600' rel='stylesheet' type='text/css'>
+
+</head>
+
+<body>
+        <div class="title">
+		<header>
+			<h1>RESTAURANTS</h1>
+		</header>
+        </div>
+		<div class="subtitle">
+			<p>EDIT RESTAURANT</p>
+		</div>
+
+		<div class="new">
+
+			<form action="{{ url_for('editRestaurant', rest_id=restaurant.id) }}" method="POST">
+                <div class="editrestaurant">
+					change from <div class="oldrestaurant">{{ deceptronItem.name }}</div>
+					to <input type="text" name="editRestaurant" value="{{ deceptronItem.name }}">
+					<input type="submit" value="SUBMIT CHANGE">
+            </form>
+             <form action="{{ url_for('home') }}">
+                              <input class="cancel" type="submit" value="CANCEL">
+             </form>
+			    </div>
+		</div>
+	
+	<footer>
+		made by joji
+	</footer>
+
+</body>
+
+</html>

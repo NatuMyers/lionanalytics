@@ -1,0 +1,48 @@
+<html>
+<head>
+
+	<meta charset="utf-8">
+	<title>RESTAURANTS</title>	
+	<link rel="stylesheet" href="{{ url_for('static', filename='normalize.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,800,600' rel='stylesheet' type='text/css'>
+
+</head>
+
+<body>
+
+		<header>
+            <div class="title">
+			<h1>RESTAURANTS</h1>
+            </div>
+		</header>
+		<div class="subtitle">
+			<p>DELETE A RESTAURANT</p>
+		</div>
+
+		<div class="new">
+			<div class="deleterestaurant">
+                <h3>
+				{{ deceptronItem.name }}
+                </h3>
+			</div>
+
+			<div class="formoptions">
+
+			<form action="{{ url_for('deleteRestaurant', rest_id=restaurant.id ) }}" method="POST">
+					<input type="submit" value="DELETE IT">
+			</form>
+
+			<form action="{{ url_for('home') }}">
+					<input type="submit" value="NO, I DIDNT MEAN TO">
+			</form>
+            </div>
+		</div>
+	
+	<footer>
+		made by joji
+	</footer>
+
+</body>
+
+</html>
