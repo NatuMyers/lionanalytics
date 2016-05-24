@@ -17,6 +17,10 @@ from arr_sfppwords import sfppWords
 from arr_sfppwords import pfppWords
 
 
+
+
+
+
 # Translate is useless but will stay for illustrative purposes
 
 
@@ -93,12 +97,15 @@ def calcDeceptiveness(text):
     
     # final calc |||----
     if negRate+actRate+inclusiveRate+pfppRate == 0:
-    	sumString = "Untracable deception present."
+    	sumString = "Untracable deception present. 💩"
     else:
     	sumString = "Deceptron Rank:  " + str(   int(negRate+actRate+inclusiveRate+pfppRate)    )
     
     
     # combined string
     resultantString = sumString + "<br/><br/>" + negativeString + "<br/>" + actionString + "<br/>" + inclusiveString + "<br/>" + pfppString + "<br/>" 
+
+    # Add to database
+    # Doc( resultantString, (int(negRate)), (int(actRate)), (int(inclusiveRate)), (int(pfppRate)) )
 
     return resultantString

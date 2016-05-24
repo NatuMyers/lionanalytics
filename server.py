@@ -3,7 +3,7 @@
 # Flask server, woo!
 #
 
-from flask import Flask, request, redirect, url_for, send_from_directory
+from flask import Flask, request, redirect, url_for, send_from_directory, jsonify
 
 # THIS IS THE ONLY PY CODE FOR THE HOME------
 
@@ -12,6 +12,47 @@ app = Flask(__name__, static_url_path='', template_folder="bigApps")
 # app = Flask(__name__, static_url_path='') # if assets in in static root, no quotes like this
 app.debug = True
 
+
+# DATA
+from flask_sqlalchemy import SQLAlchemy
+deceptronDB = SQLAlchemy(app)
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:////tmp/test.db'
+
+# Create the deceptron tables 
+def makeDeceptronDB():
+    """ A helper function to create our tables 
+    """
+    deceptronDB.create_all()
+
+
+
+class Doc(deceptronDB.Model):
+    id = deceptronDB.Column(deceptronDB.Integer, primary_key=True)
+    resultantString = deceptronDB.Column(deceptronDB.String(500))
+    negativeSubconsiousFactor = deceptronDB.Column(deceptronDB.Integer)
+    storyExaggerationFactor = deceptronDB.Column(deceptronDB.Integer)
+    cognitiveLoadFactor = deceptronDB.Column(deceptronDB.Integer)
+    selfAvoidanceFactor = deceptronDB.Column(deceptronDB.Integer)
+
+
+    def __init__(self, resultantString, input):
+        self.resultantString = resultantString
+        self.input = input
+
+
+    #def __init__(self, resultantString, negativeSubconsiousFactor, storyExaggerationFactor, cognitiveLoadFactor, selfAvoidanceFactor):
+    #    self.resultantString = resultantString
+    #    self.negativeSubconsiousFactor = negativeSubconsiousFactor
+    #    self.storyExaggerationFactor = storyExaggerationFactor
+    #    self.cognitiveLoadFactor = cognitiveLoadFactor
+    #    self.selfAvoidanceFactor = selfAvoidanceFactor
+
+    def __repr__(self):
+        return '<Doc %r>' % self.resultantString
+        
+
+        
+        
 # THE ANGULAR APP (GOES TO STATIC FOLDER)
 # Routes
 @app.route('/')
@@ -22,6 +63,7 @@ def root():
 def static_proxy(path):
   # send_static_file will guess the correct MIME type
   return app.send_static_file(path)
+
 
 
 
@@ -39,6 +81,13 @@ def deceptron():
         data = request.get_json()
         text = data[u'text']
         result = calcDeceptiveness(text)
+        
+        stringtoInt = [int(s) for s in result.split() if s.isdigit()]
+        
+        #add to db
+        deceptronDB.session.add(Doc(result,text))
+        deceptronDB.session.commit()
+		
         return result
     else:
         return render_template('deceptronHome.html')
