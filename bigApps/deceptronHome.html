@@ -53,9 +53,8 @@
         }
         
         textarea {
-
-    height: 250px;
-}
+            height: 250px;
+        }
     </style>
 
     <title>Deceptron</title>
@@ -63,8 +62,7 @@
 </head>
 
 
-
-
+<body>
 
 <!-- NAVIGATION -->
 <nav role="navigation  " class="black z-depth-5">
@@ -108,48 +106,52 @@
 
     <div class="col s12 m6 l6">
 
-                <div class="card black z-depth-5">
-                    <div class="card-content white-text">
-                        <!--<span class="card-title thins">Deception Rank</span>-->
-                        <h5 class="thin center">Enter in</h5>
-                        
-                        
-        
-
-        <form action='#' method='post'>
-            <div class="input-field"  >
-                <textarea id="input" name="text" rows="4" height="40%" placeholder="Enter text here to detect how deceptive it is!"></textarea>
-            </div>
-
-            <br>
-            <div class="form_block center">
-                <input id="button" type="button" class="btn white black-text" value="Analyze!">
-            </div>
-        </form>
-
-    </div>
-
-    <p>
-    </div>
-    </div>
-
-        <div class="col s12 m6 l6">
+        <div class="card black z-depth-5">
+            <div class="card-content white-text">
+                <!--<span class="card-title thins">Deception Rank</span>-->
+                <h5 class="thin center">Enter in</h5>
 
 
-            <div class="row center">
-                <div class="card black z-depth-5">
-                    <div class="card-content white-text">
-                        <!-- <span class="card-title thins">Deception Rank</span> -->
-                        <h5 class="thin center">Deceptron Rank</h5>
-                        <img src="deceptronAssets/brain.png" width="50%" />
 
-                        <h9 class="white-text" id="result">
-                        </h9>
+
+                <form action='#' method='post'>
+                    <div class="input-field">
+                        <textarea id="input" name="text" rows="4" height="40%" placeholder="Enter text here to detect how deceptive it is!"></textarea>
                     </div>
+
+                    <br>
+                    <div class="form_block center">
+                        <input id="button" type="button" class="btn white black-text" value="Analyze!">
+                    </div>
+                </form>
+
+            </div>
+
+            <p>
+        </div>
+    </div>
+
+    <div class="col s12 m6 l6">
+
+
+        <div class="row center">
+            <div class="card black z-depth-5">
+                <div class="card-content white-text">
+                    <!-- <span class="card-title thins">Deception Rank</span> -->
+                    <h5 class="thin center ">Deceptron Rank</h5>
+                    
+                    <span titleclass="white-text" id="result">
+                    </span>
+                    <br>
+                    
+                    <img src="deceptronAssets/brain.png" width="50%" />
+
+                    
                 </div>
             </div>
-
         </div>
+
+    </div>
 
 </div>
 
@@ -192,10 +194,6 @@
 
 <script src="deceptronAssets/jquery.js"></script>
 <script src="deceptronAssets/script.js"></script>
-
-
-
-
 
 </body>
 

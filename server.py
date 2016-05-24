@@ -29,7 +29,7 @@ def static_proxy(path):
 
 # DECEPTRON 
 from flask import render_template, jsonify
-from lib.translate import translate
+from lib.deceptron import calcDeceptiveness
 
 #MAKE SURE you update the post location (in the included js file) to 
 #this route
@@ -38,7 +38,7 @@ def deceptron():
     if request.method == 'POST':
         data = request.get_json()
         text = data[u'text']
-        result = translate(text)
+        result = calcDeceptiveness(text)
         return result
     else:
         return render_template('deceptronHome.html')
