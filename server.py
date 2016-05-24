@@ -82,15 +82,22 @@ def deceptron():
         text = data[u'text']
         result = calcDeceptiveness(text)
         
-        stringtoInt = [int(s) for s in result.split() if s.isdigit()]
+        #stringtoInt = [int(s) for s in result.split() if s.isdigit()]
         
-        #add to db
-        deceptronDB.session.add(Doc(result,text))
-        deceptronDB.session.commit()
+        #add to db if not rubbish
+        
+        if result != "Untracable deception present.":
+            deceptronDB.session.add(Doc(result,text))
+            deceptronDB.session.commit()
 		
         return result
     else:
         return render_template('deceptronHome.html')
+
+# about page
+@app.route('/aboutDeceptron')
+def aboutDeceptron():
+    	return render_template('aboutDeceptron.html')
 
 
 

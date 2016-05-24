@@ -97,7 +97,7 @@ def calcDeceptiveness(text):
     
     # final calc |||----
     if negRate+actRate+inclusiveRate+pfppRate == 0:
-    	sumString = "Untracable deception present. 💩"
+    	sumString = "Untracable deception present."
     else:
     	sumString = "Deceptron Rank:  " + str(   int(negRate+actRate+inclusiveRate+pfppRate)    )
     

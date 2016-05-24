@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<!-- INCLUDES IN THIS FILE ARE FROM STATIC, so deceptronAssets means static/deceptronAssets-->
+<html>
+
+<head>
+
+    <link media="all">
+    <!--<link rel="stylesheet" type="text/css" href="deceptronAssets/reset.min.css"> -->
+    <!--<link rel="stylesheet" type="text/css" href="deceptronAssets/base.css"> -->
+
+    <!-- JS (load angular, ui-router, and our custom js file) -->
+    <script src="http://code.angularjs.org/1.2.13/angular.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.8/angular-ui-router.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.js"></script>
+
+
+    <script src="//https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-rc1/jquery.js"></script>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+
+
+    <link rel="stylesheet" type="text/css" href="css/vidBg.css">
+
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="/sass/materialize.css" type="text/css" rel="stylesheet" media="screen,projection" />
+    <link href="/css/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
+
+    <!-- VERY IMPORTANT FOR DECEPTRON ROUTING! -->
+    <!-- the other materialize stuff is from static root, but this is special -->
+    <script src="/deceptronAssets/deceptronRouting.js"></script>
+
+    <style>
+        .bg-1 {
+            position: fixed;
+            right: 0;
+            bottom: 0;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            z-index: -100;
+            background: url('img/back1.jpg') no-repeat;
+            background-size: cover;
+        }
+        
+        .content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 30px;
+            background: rgba(255, 255, 255, .9);
+        }
+        
+        textarea {
+            height: 250px;
+        }
+    </style>
+
+    <title>Deceptron</title>
+
+</head>
+
+
+<body>
+
+<!-- NAVIGATION -->
+<nav role="navigation  " class="black z-depth-5">
+    <div class="nav-wrapper container "><a id="logo-container" href="http://www.lionanalytics.com" class="brand-logo white-text thin  "><h6>Lion</h6></a>
+
+
+        <!-- blog -->
+        <!-- Desktop version -->
+        <ul class="right white-text thin">
+            <li class="thin white-text">
+                <a hsref="https://www.linkedin.com/today/author/0_1Dn8k0FTgFr9Xk2b5dNgCh?trk=prof-sm">
+                    <h7 class="thin white-text">Blog</h7>
+                </a>
+            </li>
+        </ul>
+
+        <!-- blog -->
+        <!-- Desktop version -->
+        <ul class="right white-text thin">
+            <li class="thin white-text">
+                <a href="aboutDeceptron">
+                    <h7 class="thin white-text ">Deceptron App</h7>
+                </a>
+            </li>
+        </ul>
+
+    </div>
+</nav>
+
+
+
+<!-- THIS IS WHERE WE WILL INJECT OUR CONTENT ============================== -->
+<div class="container center">
+
+    <br></br>
+    <img src="deceptronAssets/deceptronTitle.png" width="70%" />
+    <br>
+    
+
+<h2 class = "black white-text"><a href = "">MUST READ (CLICK HERE)</a></h2>
+<div align="left">
+
+<h5 class = "thin">Excerpt from "Terrorism Informatics: Knowledge Management and Data Mining for Homeland"</h5>
+<div align="left">
+ <br>
+Pennebaker empirically developed measures of how word usage changes when authors are arguing for a position they believe in versus when they are arguing for a position that they do not believe in. The differences are not in the content words that convey the sense of what is written, rather, the differences appear in the small words that do not usually receive attention, either cognitively or linguistically. Pennebaker suggested that deception is characterized by four patterns of change in word frequency.
+<br> <br>
+
+
+    <img src="deceptronAssets/deceptronInfo.png" class = "center" width="70%" />
+
+    
+    <br>
+<br><br>1. Reduced use of fast-person pronouns, perhaps as a way of distancing the author from the deception
+<br><br>2. Reduced use of exception words (but, or, except), perhaps because the cognitive load of creating the deception is too large to allow for fancy touches, or because of an awareness of the need to be consistent if questioned
+<br><br>3. Increased use of negative emotion words, perhaps because of negative feelings, inadequately suppressed, about the process or consequences of deception.
+<br><br>4. Increased use of action verbs, perhaps as a way of keeping the story mwing, and perhaps only as a consequence of a reduction in other, more-subtle, kinds of verbs. 
+<br><br>This model was success applied to the "Enron email dataset". The dataset contains mails to and from Enron employees who never imagined that their writing would be made public. As a result, it has been proven to be an appropriate surrogate for intercepted messages. 
+
+<br><br>
+<b>This is how all the factors were generated. Deceptron uses single value decomposition after analyzing all the text values to determine deception. The user must use this app to COMPARE 2 or more pieces of SIMILAR text. This is how the app was intended to be used.</b>
+
+
+
+</div>
+
+</div>
+
+
+</div>
+
+
+
+<footer class="page-footer black ">
+    <div class="container">
+        <div class="row">
+            <div class="col l6 s12">
+                <h6 class="white-text">Lion</h6>
+                <p class="white-text ">Lion prides itself on delivering data mined insights that can answer real world questions and trends.</p>
+
+            </div>
+            <div class="col l3 s12">
+                <h6 class="white-text">Links</h6>
+                <ul>
+                    <li><a class="white-text light" href="https://skillicorn.wordpress.com">David Skillicorn</a>
+                    </li>
+
+                </ul>
+            </div>
+            <div class="col l3 s12">
+                <h6 class="white-text">Connect</h6>
+                <ul>
+                    <li><a class="white-text light" href="http://facebook.com">Facebook Page</a>
+                    </li>
+                    <li><a class="white-text light" href="http://raptroop.com">Raptroop</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="footer-copyright">
+        <div class="container">
+            <a class="white-text "> Made by  </a> <a class="white-text " href="http://natumyers.com">Natu Myers</a>
+        </div>
+    </div>
+</footer>
+
+
+
+<script src="deceptronAssets/jquery.js"></script>
+<script src="deceptronAssets/script.js"></script>
+
+</body>
+
+</html>
